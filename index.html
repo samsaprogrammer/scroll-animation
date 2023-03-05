@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Animation</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <section class="reveal">
+        <h1>Reveal Element on Scroll</h1>
+    </section>
+
+
+    <!-- First Section Start -->
+
+    <section>
+        <div class="containerbox reveal">
+            <h2>Your Title</h2>
+            <div class="card">
+
+                <!-- First -->
+                <div class="text-card">
+                    <h3>Title</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit non dolore ad a omnis inventore aliquid, voluptatum sapiente, facere rerum necessitatibus dolor ut consectetur esse asperiores nemo dolorem! Possimus, consectetur!</p>
+                </div>
+
+                <!-- Second -->
+                <div class="text-card">
+                    <h3>Title</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit non dolore ad a omnis inventore aliquid, voluptatum sapiente, facere rerum necessitatibus dolor ut consectetur esse asperiores nemo dolorem! Possimus, consectetur!</p>
+                </div>
+
+                <!-- Third -->
+                <div class="text-card">
+                    <h3>Title</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit non dolore ad a omnis inventore aliquid, voluptatum sapiente, facere rerum necessitatibus dolor ut consectetur esse asperiores nemo dolorem! Possimus, consectetur!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Second Section Start -->
+    <section>
+        <div class="containerbox reveal">
+            <h2>Your Title</h2>
+            <div class="card">
+
+                <!-- First -->
+                <div class="text-card">
+                    <h3>Title</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit non dolore ad a omnis inventore aliquid, voluptatum sapiente, facere rerum necessitatibus dolor ut consectetur esse asperiores nemo dolorem! Possimus, consectetur!</p>
+                </div>
+
+                <!-- Second -->
+                <div class="text-card">
+                    <h3>Title</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit non dolore ad a omnis inventore aliquid, voluptatum sapiente, facere rerum necessitatibus dolor ut consectetur esse asperiores nemo dolorem! Possimus, consectetur!</p>
+                </div>
+
+                <!-- Third -->
+                <div class="text-card">
+                    <h3>Title</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit non dolore ad a omnis inventore aliquid, voluptatum sapiente, facere rerum necessitatibus dolor ut consectetur esse asperiores nemo dolorem! Possimus, consectetur!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Third Section start -->
+    <section>
+        <div class="containerbox reveal">
+            <h2>Your Title</h2>
+            <div class="card">
+
+                <!-- First -->
+                <div class="text-card">
+                    <h3>Title</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit non dolore ad a omnis inventore aliquid, voluptatum sapiente, facere rerum necessitatibus dolor ut consectetur esse asperiores nemo dolorem! Possimus, consectetur!</p>
+                </div>
+
+                <!-- Second -->
+                <div class="text-card">
+                    <h3>Title</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit non dolore ad a omnis inventore aliquid, voluptatum sapiente, facere rerum necessitatibus dolor ut consectetur esse asperiores nemo dolorem! Possimus, consectetur!</p>
+                </div>
+
+                <!-- Third -->
+                <div class="text-card">
+                    <h3>Title</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit non dolore ad a omnis inventore aliquid, voluptatum sapiente, facere rerum necessitatibus dolor ut consectetur esse asperiores nemo dolorem! Possimus, consectetur!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <script type="text/javascript">
+        window.addEventListener('scroll', reveal);
+
+        function reveal(){
+            var reveals = document.querySelectorAll('.reveal');
+
+            for(var i = 0; i<reveals.length; i++){
+
+                var windowheight = window.innerHeight;
+                var revealtop = reveals[i].getBoundingClientRect().top;
+                var revealpoint = 150;
+
+                if(revealtop < windowheight - revealpoint){
+                    reveals[i].classList.add('active');
+                }
+
+                else{
+                    reveals[i].classList.remove('active');
+                }
+            }
+        }
+    </script>
+</body>
+</html>
